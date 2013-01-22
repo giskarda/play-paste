@@ -1,0 +1,15 @@
+@(pasteForm: Form[String])
+
+@import helper._
+@import helper.twitterBootstrap._
+
+@main("Gpasties") {
+<h2>Add a new paste</h2>
+
+    @form(routes.Paste.newPaste) {
+        @textarea(pasteForm("Paste"),'rows -> 14, 'cols -> 2) 
+        <input type="submit" value="Create">
+    }
+    
+}
+
